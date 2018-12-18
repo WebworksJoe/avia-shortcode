@@ -406,7 +406,7 @@ if ( !class_exists( 'avia_sc_solicitors' ) )
 				
 				$atts['fullscreen'] = ShortcodeHelper::is_top_level();
 
-				$grid = new avia_post_grid($atts);
+				$grid = new solicitors_avia_post_grid($atts);
 				$grid->query_entries();
 				$portfolio_html = $grid->html();
 			
@@ -435,9 +435,9 @@ if ( !class_exists( 'avia_sc_solicitors' ) )
 
 
 
-if ( !class_exists( 'avia_post_grid' ) )
+if ( !class_exists( 'solicitors_avia_post_grid' ) )
 {
-	class avia_post_grid
+	class solicitors_avia_post_grid
 	{
 		static  $grid = 0;
 		static  $preview_template = array();
